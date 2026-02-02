@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mind_read.css') }}">
+    <script src="{{ url_for('static', filename='mind_read.js') }}"></script>
+</head>
+<body>
+
+  <h1 class="page-title">🎮 Games</h1>
+
+  <div class="scene">
+    <div class="game-card" onclick="startMindGame()">
+      <div class="icon">🧠</div>
+      <h2>Mind Reading Game</h2>
+      <p>Think a number and follow the steps.<br>I will guess the answer 😎</p>
+      <span class="play-text">Click to Play</span>
+    </div>
+  </div>
+
+  <!-- Your JavaScript file -->
+  <script src="mind_read.js"></script>
+
+</body>
+</html>

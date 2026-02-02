@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Letter Guessing Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='hangman.css') }}">
+    <script src="{{ url_for('static', filename='hangman.js') }}"></script>
+</head>
+<body>
+
+<div class="scene">
+  <div class="card">
+    <h2>Letter Guessing Game</h2>
+
+    <p id="wordDisplay">------</p>
+    <p id="chances">Chances Left: 7</p>
+
+    <input type="text" id="letterInput" maxlength="1" placeholder="Enter a letter">
+    <button onclick="guessLetter()">Guess</button>
+
+    <p id="message"></p>
+    <button class="start" onclick="startGame()">Restart</button>
+  </div>
+</div>
+
+<script src="hangman.js"></script>
+</body>
+</html>

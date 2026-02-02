@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="history">
+    <div class="hero">
+        <h2>Mood History</h2>
+        <p>Track your feelings over time</p>
+    </div>
+
+    <ul class="history-list">
+        {% for mood in moods %}
+        <li class="history-item fade-in delay-{{ loop.index }}">
+            <p>{{ mood.description }}</p>
+            <small>{{ mood.created_at.strftime('%d %b %Y %H:%M') }}</small>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="placeholder-container">
+        <div class="placeholder-card">Stay positive!</div>
+        <div class="placeholder-card">Keep reflecting</div>
+        <div class="placeholder-card">New thoughts here</div>
+    </div>
+</section>
+
+{% endblock %}

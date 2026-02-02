@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Guessing Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='word.css') }}">
+  <script src="{{ url_for('static', filename='word.js') }}"></script>
+</head>
+<body>
+
+<div class="scene">
+  <div class="card" id="gameCard">
+    <h2>Word Guessing Game</h2>
+
+    <p id="hint">Click START to begin</p>
+
+    <input type="text" id="guessInput" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Submit</button>
+
+    <button class="start" onclick="startGame()">Start Game</button>
+
+    <p id="message"></p>
+  </div>
+</div>
+
+<script src="word.js"></script>
+</body>
+</html>

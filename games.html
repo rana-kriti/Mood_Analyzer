@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="games-hero">
+    <h2>Our Games</h2>
+    <p>Explore our collection</p>
+</section>
+
+<section class="games">
+    <!-- rock-paper-scissor -->
+    <div class="game-card tic-opener" onclick="window.location.href='{{ url_for('rps') }}'">
+        <img src="https://th.bing.com/th/id/OIP.RPHITDeRv3-Yl8fBwKdkFgHaD9?w=274&h=180&c=7&r=0&o=7&pid=1.7&rm=3">
+        <h3>Rock-Paper-Scissor</h3>
+        <p>Click to Play!</p>
+    </div>
+
+    <!--number guess-->
+    <div class="game-card " onclick="window.location.href='{{ url_for('guess_number') }}'">
+        <img src="https://easyshiksha.com/online_courses/assets/games/number-guessing/images/banner.png">
+        <h3>Guess the Number</h3>
+        <p>Click to Play!</p>
+    </div>
+
+    <!--word guess-->
+    <div class="game-card " onclick="window.location.href='{{ url_for('guess_word') }}'">
+        <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/f3/30/a9/f330a9f6-a473-7686-ff24-0cb4c4eef352/source/512x512bb.jpg">
+        <h3>Guess the Word</h3>
+        <p>Click to Play!</p>
+    </div>
+
+    <!--hangman-->
+    <div class="game-card " onclick="window.location.href='{{ url_for('hangman') }}'">
+        <img src="data:image/webp;base64,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">
+        <h3>Hangman</h3>
+        <p>Click to Play!</p>
+    </div>
+
+    <!--mind read game-->
+    <div class="game-card " onclick="window.location.href='../mind_read/mind_read.html'">
+        <img src="https://codeclerks.com/pics/1526-1ETbyP1540265432.jpg">
+        <h3>Mind Trick</h3>
+        <p>Click to Play!</p>
+    </div>
+
+</section>
+{% endblock %}

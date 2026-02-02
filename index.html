@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero">
+    <h2>Serious about moods, fun to use</h2>
+    <p>Analyze • Understand • Improve</p>
+</section>
+
+<div class="scene">
+    <div class="carousel" id="carousel">
+        <div class="card"><img src="https://img.freepik.com/premium-photo/animated-image-boy-happy-mood_849906-17068.jpg"></div>
+        <div class="card"><img src="https://img.freepik.com/premium-photo/tired-man-sleepy-mood-weak-health-mental-exhausted-vector-flat-illustration_1197797-193334.jpg"></div>
+        <div class="card"><img src="https://cdna.artstation.com/p/assets/images/images/059/963/202/large/andrea-sadness-01.jpg"></div>
+        <div class="card"><img src="https://tse2.mm.bing.net/th/id/OIP.yvW81JAnlucFJXCg6dPrOAHaE7"></div>
+        <div class="card"><img src="https://img.freepik.com/premium-vector/confused-girl-vector-illustration_869741-742.jpg"></div>
+    </div>
+</div>
+
+<div class="controls">
+    <button onclick="rotatePrev()">◀ Rotate</button>
+    <button onclick="rotateNext()">Rotate ▶</button>
+</div>
+
+<button id="getStartedBtn">Get Started</button>
+
+<script>
+  let angle = 0;
+  const carousel = document.getElementById("carousel");
+
+  function rotateNext() {
+    angle += 60;
+    carousel.style.transform = `rotateY(${angle}deg)`;
+  }
+
+  function rotatePrev() {
+    angle -= 60;
+    carousel.style.transform = `rotateY(${angle}deg)`;
+  }
+
+  document.getElementById("getStartedBtn").addEventListener("click", function () {
+    window.location.href = "{{ url_for('mood') }}";
+  });
+</script>
+
+{% endblock %}

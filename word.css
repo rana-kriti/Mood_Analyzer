@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.scene {
+  perspective: 1000px;
+}
+
+.card {
+  width: 350px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 20px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+  transform: rotateY(12deg) rotateX(8deg);
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #243b55;
+  color: white;
+}
+
+button.start {
+  background: #141e30;
+}
+
+#message {
+  margin-top: 10px;
+  font-weight: bold;
+}

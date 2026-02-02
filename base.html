@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mood analyser | Home</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- <script src="C:\Users\Lenovo\Desktop\file\3d_site\static\script.js"></script> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="C:\Users\Lenovo\Desktop\file\3d_site\static\style.css"> -->
+</head>
+<body>
+
+<nav>
+    <h1>Mood analyser</h1>
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/games">Games</a>
+        <a href="/history">History</a>
+    </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
